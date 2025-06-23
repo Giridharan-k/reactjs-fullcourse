@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Footer from './Footer';
-import Header from './Header';
+
 
 
 function TodoList() {
@@ -18,7 +17,7 @@ function TodoList() {
     return (
         
         <React.Fragment>
-            <Header/>
+            
 
             <input
                 type="text"
@@ -34,7 +33,7 @@ function TodoList() {
                     </div>
                 ))
             }
-            <Footer/>
+            
         </React.Fragment>
     );
 
