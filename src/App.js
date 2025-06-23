@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 
@@ -31,7 +31,6 @@ const [password, setPassword]=useState('');
         <h3>Entered Details:</h3>
         <p><strong>Email:</strong>{email}</p>
         <p><strong>Password:</strong>{password}</p>
-        
        </div>
     </div>
    
