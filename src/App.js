@@ -13,10 +13,15 @@ function App() {
     }
   };
 
+  const removeTodo = (index) => {
+    const updatedList = todoList.filter((_, i) => i !== index);
+    setTodoList(updatedList);
+  };
+
   return (
     <div>
       <Header onAdd={addTodo}/>
-      <Todolist todos={todoList}/>
+      <Todolist todos={todoList} onRemove={removeTodo}/>
       <Footer/>
     </div>
   );

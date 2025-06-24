@@ -14,3 +14,25 @@
   padding: 10px;
   border-radius: 5px;
 }
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 6px;
+}
+.remove-btn {
+  margin-left: auto;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #e60000;
+}
