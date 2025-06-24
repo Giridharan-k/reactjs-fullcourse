@@ -1,42 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react'
+import './todolist.css';
 
-
-
-function TodoList() {
-
-    // let todoList = [];
-    // var inputValue;
-    const [inputValue, setInputValue] = useState("");
-    const [todoList, setTodoList] = useState(['Learn React', 'Build App', 'Deploy Project']);
-
-    function addList() {
-        setTodoList([...todoList, inputValue]);
-        setInputValue("")
-    }
-
-    return (
-        
-        <React.Fragment>
-            
-
-            <input
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Enter a task"
-            />
-            <input type='button' value="Add" onClick={addList} />
-            {
-                todoList.map((data, index) => (
-                    <div key={index}>
-                        <input type='checkbox' value={data} /> {data}
-                    </div>
-                ))
-            }
-            
-        </React.Fragment>
-    );
-
+function Todolist({ todos}) {
+  return (
+    <div>
+       <div className="body">
+      <h2>My Todo List</h2>
+      <ul>
+        {todos.map((item, index) => (
+            <div key={index}>
+                <input type="checkbox" value={item} />{item}
+            </div>
+        ))}
+      </ul>
+    </div>
+    </div>
+  )
 }
 
-export default TodoList;
+export default Todolist;

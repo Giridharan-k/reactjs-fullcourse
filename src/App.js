@@ -1,20 +1,24 @@
-
-import './App.css';
-
-import TodoList from './todolist';
+import React, { useState } from 'react';
+import Header from './workout/Header';
+import Footer from './workout/Footer';
+import Todolist from './Todolist';
 
 
 function App() {
-// const [email,setEmail] = useState('');
-// const [password, setPassword]=useState('');
+  const [todoList, setTodoList] = useState([]);
 
-
+  const addTodo = (newItem) => {
+    if (newItem.trim() !== '') {
+      setTodoList([...todoList, newItem]);
+    }
+  };
 
   return (
     <div>
-      <TodoList/>
+      <Header onAdd={addTodo}/>
+      <Todolist todos={todoList}/>
+      <Footer/>
     </div>
-   
   );
 }
 

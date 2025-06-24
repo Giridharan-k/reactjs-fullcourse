@@ -1,11 +1,10 @@
-import React from 'react'
+import './Footer.css';
 
-function Footer() {
-  return (
-    <div>
-    <Footer>2025</Footer>
-    </div>
+function Footer (){
+  return(
+     <footer className="footer">
+      <p>&copy; 2025 My Todo App. All rights reserved.</p>
+    </footer>
   )
 }
-
-export default Footer
+export default Footer;

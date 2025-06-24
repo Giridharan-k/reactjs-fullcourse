@@ -1,0 +1,16 @@
+.body {
+  padding: 20px;
+  min-height: 300px;
+}
+
+.body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.body li {
+  background: #f4f4f4;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
