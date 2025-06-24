@@ -9,7 +9,8 @@ function Todolist({ todos, onRemove}) {
       <ul className='todo-item'>
         {todos.map((item, index) => (
             <div key={index}>
-                <input type="checkbox" value={item} />{item}
+                <input type="checkbox" value={item} />
+                <span>{item}</span>
                 <button className='remove-btn' onClick={()=> onRemove(index)}>Remove</button>
             </div>
         ))}
